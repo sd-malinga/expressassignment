@@ -5,10 +5,9 @@ http = require('http');
 const hostname = 'localhost';
 const port = 3000;
 const bodyParser = require('body-parser');
+const dishRouter = require('./dishRouter');
 
 const app = express();
-app.use(bodyParser.json());
-const dishRouter = require('./routes/dishRouter');
 
 app.use('/dishes', dishRouter);
   
